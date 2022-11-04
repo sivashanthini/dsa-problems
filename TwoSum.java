@@ -21,7 +21,7 @@ Constraints:
     Only one valid answer exists.
 
 */
-
+#Create a Hashmap,and check if target - key is in the map then return the index of key and (target-key), else add target - key to the map
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> numMap = new HashMap<>();
