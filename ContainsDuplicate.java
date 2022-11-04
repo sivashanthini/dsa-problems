@@ -14,6 +14,7 @@ Constraints:
     -109 <= nums[i] <= 109
 
 */
+#Create a Hashset,and check if key is in the set then return true, else add key to the set. If all the keys are added to set then there is no duplicate return false
 
 class Solution {
     public boolean containsDuplicate(int[] nums) {
