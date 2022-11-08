@@ -14,6 +14,7 @@ Constraints:
     1 <= n <= 105
     1 <= nums[i] <= n
 */
+//For each value in the array mark its presence by making the number negative at that place in array
 
 class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
