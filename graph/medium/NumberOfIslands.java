@@ -1,3 +1,5 @@
+package graph.medium;
+
 /*
 Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
 
@@ -31,7 +33,7 @@ Constraints:
     1 <= m, n <= 300
     grid[i][j] is '0' or '1'
 */
-class Solution {
+public class NumberOfIslands {
     public int numIslands(char[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
@@ -46,7 +48,6 @@ class Solution {
         }
         return ans;
     }
-    
     private void dfs(int i, int j, int m, int n, char[][] grid) {
         
         if (i < 0 || i >= m || j < 0 || j >= n || grid[i][j] == '0') {  
@@ -57,6 +58,10 @@ class Solution {
         dfs(i-1, j, m, n, grid);
         dfs(i, j+1, m, n, grid);
         dfs(i, j-1, m, n, grid);
-        
+        // if considering the diagonal elements as well
+        //        dfs(i-1, j-1, visited, m, n, grid);
+        //        dfs(i+1, j+1, visited, m, n, grid);
+        //        dfs(i-1, j+1, visited, m, n, grid);
+        //        dfs(i+1, j-1, visited, m, n, grid);
     }
 }
