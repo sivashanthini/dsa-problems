@@ -1,4 +1,4 @@
-/*
+package graph.medium;/*
 Given a reference of a node in a connected undirected graph.
 
 Return a deep copy (clone) of the graph.
@@ -50,7 +50,9 @@ Constraints:
     There are no repeated edges and no self-loops in the graph.
     The Graph is connected and all nodes can be visited starting from the given node.
 */
-/*
+
+import java.util.*;
+
 // Definition for a Node.
 class Node {
     public int val;
@@ -68,15 +70,14 @@ class Node {
         neighbors = _neighbors;
     }
 }
-*/
 
-class Solution {
+public class CloneGraph {
     public Node cloneGraph(Node node) {
         if (node == null)
             return null;
         
-        Queue<Node> deque = new LinkedList<>();
-        HashMap<Node,Node> map = new HashMap<>();
+        Queue<Node> deque = new LinkedList();
+        HashMap<Node,Node> map = new HashMap();
         deque.offer(node);
         Node root = new Node(node.val);
         map.put(node, root);

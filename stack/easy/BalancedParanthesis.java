@@ -1,3 +1,7 @@
+package stack.easy;
+
+import java.util.Stack;
+
 /*
 Given an expression string A, examine whether the pairs and the orders of “{“,”}”, ”(“,”)”, ”[“,”]” are correct in A.
 
@@ -11,9 +15,9 @@ Output Format
 Return 0 if the parenthesis sequence is not balanced.
 Return 1 if the parenthesis sequence is balanced.
 */
-public class Solution {
+public class BalancedParanthesis {
     public int solve(String A) {
-        Stack<String> stack = new Stack<>();
+        Stack<String> stack = new Stack();
         String[] stringArray = A.split("");
         for (String item : stringArray) {
             if (item.equals("{") || item.equals("(") || item.equals("["))

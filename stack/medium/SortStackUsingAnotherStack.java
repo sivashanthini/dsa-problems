@@ -1,4 +1,4 @@
-/*
+package stack.medium;/*
 Given a stack of integers A, sort it using another stack.
 Return the array of integers after sorting the stack using another stack.
 
@@ -23,11 +23,14 @@ Output 2:
  [5, 11, 17, 100]
 */
 
-public class Solution {
+import java.util.ArrayList;
+import java.util.Stack;
+
+public class SortStackUsingAnotherStack {
     public ArrayList<Integer> solve(ArrayList<Integer> A) {
-        Stack<Integer> stack1 = new Stack<>();
-        Stack<Integer> stack2 = new Stack<>();
-        ArrayList<Integer> result = new ArrayList<>();
+        Stack<Integer> stack1 = new Stack();
+        Stack<Integer> stack2 = new Stack();
+        ArrayList<Integer> result = new ArrayList();
         Integer topNum = null;
         for (Integer num : A) {
             if (stack1.isEmpty()) {
