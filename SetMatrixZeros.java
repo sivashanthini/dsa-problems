@@ -1,8 +1,9 @@
+import java.util.ArrayList;
 
 //As additional space is needed the time complexity is : O(MN) and space is O(M+N)
-class Solution {
+public class SetMatrixZeros {
     public void setZeroes(int[][] matrix) {
-        ArrayList<Integer> indexList = new ArrayList<>();
+        ArrayList<Integer> indexList = new ArrayList();
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
                 if (matrix[i][j] == 0) {
@@ -26,7 +27,7 @@ class Solution {
 
 //To reduce space complexity to O(1) we can make the first row itself as an indicator of whether that row or col needs be made zero or not.
 
-class Solution {
+class SetMatrixZeros2 {
     public void setZeroes(int[][] matrix) {
         boolean isCol = false, isRow = false; //flag to check any num in first row or col is zero
         for (int i = 0; i < matrix.length; i++) {

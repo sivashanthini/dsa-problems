@@ -1,4 +1,4 @@
-package stack.medium;/*
+/*
 Given a stack of integers A, sort it using another stack.
 Return the array of integers after sorting the stack using another stack.
 
@@ -22,6 +22,8 @@ Input 2:
 Output 2:
  [5, 11, 17, 100]
 */
+
+package stack.medium;
 
 import java.util.ArrayList;
 import java.util.Stack;

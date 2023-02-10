@@ -1,5 +1,3 @@
-package graph.medium;
-
 /*
 Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
 
@@ -33,6 +31,9 @@ Constraints:
     1 <= m, n <= 300
     grid[i][j] is '0' or '1'
 */
+
+package graph.medium;
+
 public class NumberOfIslands {
     public int numIslands(char[][] grid) {
         int m = grid.length;

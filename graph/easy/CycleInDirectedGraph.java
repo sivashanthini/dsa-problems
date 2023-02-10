@@ -1,4 +1,3 @@
-package graph.easy;
 /*
 Given an directed graph having A nodes. A matrix B of size M x 2 is given which represents the M edges such that there is a edge directed from node B[i][0] to node B[i][1].
 
@@ -48,8 +47,10 @@ Output 1:
 
 Output 2:
  0
-
  */
+
+package graph.easy;
+
 import java.util.ArrayList;
 
 public class CycleInDirectedGraph {

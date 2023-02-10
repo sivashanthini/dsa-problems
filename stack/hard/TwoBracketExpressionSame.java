@@ -1,7 +1,3 @@
-package stack.hard;
-
-import java.util.Stack;
-
 /*
 Given two strings A and B. Each string represents an expression consisting of lowercase English alphabets, '+', '-', '(' and ')'.
 The task is to compare them and check if they are similar. If they are identical, return 1 else, return 0.
@@ -29,6 +25,11 @@ Input 2:
 Output 2:
 0
  */
+
+package stack.hard;
+
+import java.util.Stack;
+
 public class TwoBracketExpressionSame {
     private boolean checkSign(String str, int index) {
         if (index == 0)
