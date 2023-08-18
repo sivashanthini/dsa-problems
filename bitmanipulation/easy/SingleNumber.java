@@ -21,7 +21,7 @@ Constraints:
     Each element in the array appears twice except for one element which appears only once.
 */
 
-package array.easy;
+package bitmanipulation.easy;
 
 class SingleNumber {
     public int singleNumber(int[] nums) {
