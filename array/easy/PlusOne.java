@@ -30,7 +30,7 @@ Constraints:
 digits does not contain any leading 0's.
 */
 
-package array.medium;
+package array.easy;
 
 public class PlusOne {
     public int[] plusOne(int[] digits) {
@@ -39,16 +39,12 @@ public class PlusOne {
             if (digits[i] < 9) {
                 digits[i] = digits[i] + 1;
                 return digits;
-            } else {
-                digits[i] = 0;
-            }    
+            }
+            digits[i] = 0;
         }
-        if (digits[0] == 0) {
-            int[] newDigits = new int[len+1];
-            newDigits[0] = 1;
-            return newDigits;
-        }
-        return null;
-        
+
+        int[] newDigits = new int[len+1];
+        newDigits[0] = 1;
+        return newDigits;
     }
 }
