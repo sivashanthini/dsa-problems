@@ -49,7 +49,7 @@ public class ReverseWordsInAString {
             else {
                 if (charArray[i+1] == ' ')
                     continue;
-                finalStr.append(strBu1.reverse().toString());
+                finalStr.append(strBu1.reverse());
                 finalStr.append(" ");
                 strBu1.setLength(0);
             }
