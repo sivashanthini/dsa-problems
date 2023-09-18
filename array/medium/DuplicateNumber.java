@@ -347,4 +347,13 @@ public class DuplicateNumber {
         
         return slow;    
     }
+    public int findDuplicateUsingVisited(int[] nums) {
+        for (int num : nums) {
+            int index = Math.abs(num);
+            if (nums[index] < 0)
+                return index;
+            nums[index] = -nums[index];
+        }
+        return 0;
+    }
 }
