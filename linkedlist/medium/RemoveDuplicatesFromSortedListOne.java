@@ -19,7 +19,7 @@ package linkedlist.medium;
 
 import linkedlist.ListNode;
 
-public class RemoveDuplicatesFromSortedList1 {
+public class RemoveDuplicatesFromSortedListOne {
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null)
             return head;

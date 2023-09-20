@@ -30,7 +30,7 @@ package linkedlist.medium;
 
 import linkedlist.ListNode;
 
-public class LinkedListCycle2 {
+public class LinkedListCycleTwo {
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
