@@ -30,6 +30,8 @@ Solution link : https://youtu.be/RBXJvhgcWgM
  */
 package array.medium;
 
+import java.util.Arrays;
+
 public class ProductOfArrayExceptSelf {
     public int[] productExceptSelf(int[] nums) {
         int[] result = new int[nums.length];
@@ -39,6 +41,7 @@ public class ProductOfArrayExceptSelf {
             result[i] = prod;
             prod = prod * nums[i];
         }
+        System.out.println(Arrays.toString(result));
         prod = 1;
         for (int i = nums.length-1; i >= 0; i--) {
             result[i] = result[i] * prod;
@@ -46,5 +49,10 @@ public class ProductOfArrayExceptSelf {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
+        productOfArrayExceptSelf.productExceptSelf(new int[] {1,2,3,4});
     }
 }
