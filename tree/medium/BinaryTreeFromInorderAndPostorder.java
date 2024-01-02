@@ -59,13 +59,13 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class BinaryTreeFromInorderAndPostorder {
-    public TreeNode buildTreeIterative(int[] inorder, int[] B) {
-        if (inorder.length != B.length || inorder.length == 0) return null;
+    public TreeNode buildTreeIterative(int[] inorder, int[] postorder) {
+        if (inorder.length != postorder.length || inorder.length == 0) return null;
         if (inorder.length == 1) return new TreeNode(inorder[0]);
         int inorderLength = inorder.length - 1;
-        int postOrderLength = B.length - 1;
+        int postOrderLength = postorder.length - 1;
         TreeNode prev = null;
-        TreeNode root = new TreeNode(B[postOrderLength]);
+        TreeNode root = new TreeNode(postorder[postOrderLength]);
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
         postOrderLength--;
@@ -75,7 +75,7 @@ public class BinaryTreeFromInorderAndPostorder {
                 prev = stack.pop();
                 inorderLength--;
             }
-            TreeNode node = new TreeNode(B[postOrderLength]);
+            TreeNode node = new TreeNode(postorder[postOrderLength]);
             if (prev != null) prev.left = node;
             else stack.peek().right = node;
             stack.push(node);
@@ -85,6 +85,8 @@ public class BinaryTreeFromInorderAndPostorder {
         return root;
     }
     public TreeNode buildTreeRecursive(int[] inorder, int[] postorder) {
+        if (inorder.length != postorder.length || inorder.length == 0) return null;
+        if (inorder.length == 1) return new TreeNode(inorder[0]);
          HashMap<Integer, Integer> map = new HashMap<>();
          for (int i = 0; i < inorder.length; i++) map.put(inorder[i], i);
          return buildTreeHelper(inorder, postorder, 0, inorder.length-1, postorder.length-1, map);
