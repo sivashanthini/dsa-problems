@@ -45,12 +45,12 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class InorderTraversal {
-    public ArrayList<Integer> inorderTraversal(TreeNode A) {
+    public ArrayList<Integer> inorderTraversal(TreeNode root) {
         ArrayList<Integer> traversedList = new ArrayList<>();
-        if (A == null)
+        if (root == null)
             return traversedList;
         Stack<TreeNode> stack = new Stack();
-        TreeNode curr = A;
+        TreeNode curr = root;
         
         while (curr != null || !stack.isEmpty()) {
             if (curr != null) {

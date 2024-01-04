@@ -51,17 +51,10 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class PreOrderTraversal {
-    ArrayList<Integer> preorderTraversalList;
-
-    public PreOrderTraversal () {
-        preorderTraversalList = new ArrayList();
-    }
-    public ArrayList<Integer> preorderTraversal(TreeNode root) {
+    public ArrayList<Integer> preorderTraversalIterative(TreeNode root) {
+        ArrayList<Integer> preorderTraversalList = new ArrayList<>();
         if (root == null)
             return preorderTraversalList;
-    //    preorderTraversalList.add(root.val);
-    //    preorderTraversal(root.left);
-    //    preorderTraversal(root.right);
         Stack<TreeNode> stack = new Stack();
         TreeNode curr = root;
         while (!stack.isEmpty() || curr != null) {
@@ -74,7 +67,19 @@ public class PreOrderTraversal {
                 curr = stack.pop().right;
             }
         }
-
         return preorderTraversalList;
+    }
+    public ArrayList<Integer> preorderTraversalRecursive(TreeNode root) {
+        ArrayList<Integer> preorderTraversalList = new ArrayList<>();
+        if (root == null)
+            return preorderTraversalList;
+        preorderTraversalRecursiveHelper(root, preorderTraversalList);
+        return  preorderTraversalList;
+    }
+    private void preorderTraversalRecursiveHelper(TreeNode node, ArrayList<Integer> preorderTraversalList) {
+        if (node == null) return;
+        preorderTraversalList.add(node.val);
+        preorderTraversalRecursiveHelper(node.left, preorderTraversalList);
+        preorderTraversalRecursiveHelper(node.right, preorderTraversalList);
     }
 }
