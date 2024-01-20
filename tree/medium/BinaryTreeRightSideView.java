@@ -43,7 +43,7 @@ public class BinaryTreeRightSideView {
         return list;
     }
 
-    public List<Integer> rightSideViewRecursiveDFS(TreeNode root) {
+    public List<Integer> rightSideViewRecursive(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         helper(root, list, 0);
         return list;
