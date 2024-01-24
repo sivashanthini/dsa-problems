@@ -1,4 +1,4 @@
-package tree.easy;
+package binarysearch.easy;
 
 public class BinarySearch {
     public int search(int[] nums, int target) {
