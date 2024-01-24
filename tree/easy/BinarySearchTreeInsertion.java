@@ -29,8 +29,7 @@ public class BinarySearchTreeInsertion {
     }
     private TreeNode insertRecursiveHelper(TreeNode root, int value) {
         if (root == null) {
-            root = new TreeNode(value);
-            return root;
+            return new TreeNode(value);
         }
         if (root.left.val <= value)
             root.left = insertRecursiveHelper(root.left, value);
